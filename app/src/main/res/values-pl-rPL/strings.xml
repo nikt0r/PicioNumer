@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Numer Losu</string>
+    <string name="toast_no_image">Nie ma obrazka. Sorka!</string>
+    <string name="text_generate_random">Losuj liczbę od 1 do</string>
+    <string name="btn_generate">Losuj</string>
+</resources>
