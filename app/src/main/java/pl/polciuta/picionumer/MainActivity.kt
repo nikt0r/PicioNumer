@@ -23,19 +23,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnGenerate.setOnClickListener {
-
-            editMaxNumber.text.toString().toIntOrNull()?.let { maxNumber ->
-
-                val random = Random()
-                val rand = random.nextInt(maxNumber) + 1
-                textResult.text = rand.toString()
-            }
-
-            hideKeyboard()
-
-            if (!this::job.isInitialized || !job.isActive) {
-                retrieveImage()
-            }
+            generateNumber()
         }
     }
 
@@ -67,6 +55,22 @@ class MainActivity : AppCompatActivity() {
 
     private fun cancelJob() {
         if (this::job.isInitialized) job.cancel()
+    }
+
+    private fun generateNumber() {
+        editMaxNumber.text.toString().toIntOrNull()?.let { maxNumber ->
+            if (maxNumber > 0) {
+                val random = Random()
+                val rand = random.nextInt(maxNumber) + 1
+                textResult.text = rand.toString()
+
+                hideKeyboard()
+
+                if (!this::job.isInitialized || !job.isActive) {
+                    retrieveImage()
+                }
+            }
+        }
     }
 
     private fun retrieveImage() {
