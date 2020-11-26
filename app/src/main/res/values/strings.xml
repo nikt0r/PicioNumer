@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Random Number</string>
     <string name="toast_no_image">No pic. Sorry!</string>
-    <string name="text_generate_random">Generate a number from 1 to</string>
+    <string name="text_generate_random">Generate a number between 1 and</string>
     <string name="btn_generate">Generate</string>
     <string name="text_initial_value" translatable="false">0</string>
 </resources>
